@@ -202,6 +202,12 @@ if __name__ == '__main__':
                 sources=[
                     'src/masked_conv2d_cuda.cpp', 'src/masked_conv2d_kernel.cu'
                 ]),
+            make_cuda_ext(
+                name='psroi_pooling_cuda',
+                module='mmdet.ops.psroi_pooling',
+                sources=[
+                    'src/psroi_pooling_cuda.cpp', 'src/psroi_pooling_kernel.cu'
+                ]),
         ],
         cmdclass={'build_ext': BuildExtension},
         zip_safe=False)
